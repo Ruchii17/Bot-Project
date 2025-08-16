@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Attendance Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="chatbot">
+    <div id="chat-header">Edugenie SRMIST</div>
+    <div id="chat-window">
+      <div id="messages"></div>
+      <div id="input-area">
+        <input type="text" id="userInput" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+    <div id="quick-actions">
+      <button onclick="sendMessageFromButton('Mark my attendance')">✅ Mark Attendance</button>
+      <button onclick="sendMessageFromButton('Start quiz')">📝 Start Quiz</button>
+      <button onclick="sendMessageFromButton('Show attendance stats')">📊 Stats</button>
+      <button onclick="sendMessageFromButton('Give feedback')">💬 Feedback</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
