@@ -3,27 +3,37 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 20px;
+  background-image: url(duck2.jpeg);
+  background-size: cover;
 }
 
 #chatbot {
   width: 350px;
-  margin: auto;
+  margin:50px 50px 50px 200px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(77, 74, 74, 0.2);
   border: 2px solid black;
   overflow: hidden;
+  /* background-image: url(ding.jpeg);
+  background-size: cover; */
 }
 
 #chat-header {
-  background-color:#09142D;
+  /* background-color:#06205e; */
   color: whitesmoke;
   text-align: center;
+  /* text-decoration: underline black; */
   padding: 15px;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
-  /* border: 2px solid black; */
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #fddb92, #d4fc79);
+
+
+  color: #fff;
+  letter-spacing: 1px;
+  border-bottom:2px solid black ;
 }
 
 #chat-window {
@@ -33,49 +43,114 @@ body {
   justify-content: space-between;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  
 }
 
-#messages {
+/* #messages {
   padding: 10px;
   height: 100%;
   overflow-y: auto;
   font-size: 14px;
-  /* font-family: cursive; */
+
+} */
+#message {
+  padding: 10px 14px;
+  margin: 6px;
+  border-radius: 12px;
+  max-width: 75%;
+  font-size: 14px;
+  line-height: 1.4;
+  animation: slideUp 0.3s ease-out;
 }
 
-.message {
-  margin: 10px 0;
+#typing {
+      font-style: italic;
+      font-size: 12px;
+      color: gray;
+      margin: 4px 10px;
 }
 
-.message.bot {
-  text-align: left;
-  color: #444;
-}
-
-.message.user {
-  text-align: right;
-  color: #1a73e8;
-}
+/* #input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+  width:400px;
+} */
 
 #input-area {
   display: flex;
-  border-top: 1px solid #ddd;
+  align-items: center;
+  padding: 8px;
+  border-top: none;
+  background: none;
 }
 
 #userInput {
   flex: 1;
-  padding: 10px;
-  border: none;
+  padding: 10px 14px;
+  border:1px solid  #06205e;
+  border-radius: 20px;
+  outline: none;
   font-size: 14px;
+  font-family:cursive;
 }
+
+/* #userInput {
+  flex: 1;
+  padding: 10px;
+  border:1px solid  #06205e;
+  font-size: 14px;
+  font-family:cursive;
+} */
 
 button {
   background-color:rgb(0,29,128);
   color: white;
-  border: none;
+  border: 1px dotted black;
   padding: 0 15px;
   cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.action-buttons button i {
+  margin-right: 6px;
+  font-size: 16px;
+  /* border: 1px solid black; */
+}
+
+#sendBtn {
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #004aad, #7b2ff7);
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+#sendBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+/* floating keyframes */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* hover effect */
+#sendButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 #quick-actions {
@@ -87,9 +162,32 @@ button {
 }
 
 #quick-actions button {
-  background-color:rgba(25, 183, 223, 0.547);
-  color: #9ccd15;
+  /* background-color:rgba(25, 183, 223, 0.547);
+  color: #9ccd15; */
   padding: 8px 12px;
   font-size: 13px;
   border-radius: 5px;
+}
+
+/* Button Colors */
+.mark { background: linear-gradient(135deg, #d4f7dc, #a8e6b2); color: #166534; }
+.quiz { background: linear-gradient(135deg, #ffe2d1, #ffbfa1); color: #b91c1c; }
+.stats { background: linear-gradient(135deg, #e4d7ff, #c3b4f3); color: #4c1d95; }
+.feedback { background: linear-gradient(135deg, #d6ebff, #a6c8ff); color: #1e40af; }
+
+.action-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  animation: pulse 0.6s ease-in-out;
+}
+/* 
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
